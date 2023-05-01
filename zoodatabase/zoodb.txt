@@ -1,0 +1,673 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.11
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Apr 23, 2023 at 08:12 PM
+-- Server version: 5.7.23-23
+-- PHP Version: 7.4.33
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `safariha_zoodb`
+--
+CREATE DATABASE IF NOT EXISTS `safariha_zoodb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `safariha_zoodb`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+DROP TABLE IF EXISTS `admin`;
+CREATE TABLE `admin` (
+  `CustID` int(11) NOT NULL,
+  `CustFname` varchar(255) NOT NULL,
+  `CustLname` varchar(255) NOT NULL,
+  `CustEmail` varchar(225) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `CustDOB` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`CustID`, `CustFname`, `CustLname`, `CustEmail`, `password`, `CustDOB`) VALUES
+(405995, 'allaman', 'konate', 'allamankonate@gmail.com', '$2y$10$eiYzNqNyAwdhpT3LwJfpDeQebMy518OvwGppog8agrd6ZexJF4FWO', '2023-03-10'),
+(405996, 'admin', 'admin', 'selake@gm.com', '$2y$10$slYMRSntYbZZ/WOH8RzreeZDva6rg8XRSdmOTVaXE8DEGs5XLxyEi', '1990-04-09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `animals`
+--
+
+DROP TABLE IF EXISTS `animals`;
+CREATE TABLE `animals` (
+  `animal_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `species` enum('Mammals','Reptiles','Birds','Insects','Aquatic','Fish','Amphibian') NOT NULL,
+  `age` int(11) NOT NULL,
+  `gender` enum('Male','Female','Other') NOT NULL,
+  `weight` decimal(5,2) NOT NULL,
+  `habitat_id` int(11) NOT NULL,
+  `picture` varchar(1000) NOT NULL,
+  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `animals`
+--
+
+INSERT INTO `animals` (`animal_id`, `name`, `species`, `age`, `gender`, `weight`, `habitat_id`, `picture`, `date_created`, `date_updated`) VALUES
+(775301, 'Turtle', 'Reptiles', 20, 'Female', '5.50', 3, '644532b31bc5c.jpeg', '2023-04-23 07:29:23', '2023-04-23 15:46:27'),
+(2230222, 'Horse', 'Mammals', 9, 'Male', '1.50', 1, '64452d605ebb9.jpg', '2023-04-23 07:06:40', '2023-04-23 07:06:40'),
+(2730246, 'Trout', 'Fish', 3, 'Male', '1.00', 4, '64452df365df1.jpg', '2023-04-23 07:09:07', '2023-04-23 13:14:09'),
+(3136265, 'Swordfish', 'Fish', 3, 'Male', '0.30', 4, '644526e210b7e.jpg', '2023-04-23 06:38:58', '2023-04-23 13:14:02'),
+(3932356, 'Snake', 'Reptiles', 5, 'Male', '2.10', 3, '6445687367129.jpg', '2023-04-23 11:18:43', '2023-04-23 13:17:57'),
+(5438872, 'Monkey', 'Mammals', 10, 'Male', '1.50', 1, '644525fe86d66.jpg', '2023-04-23 06:35:10', '2023-04-23 06:35:10'),
+(6004214, 'Toad', 'Amphibian', 9, 'Male', '1.10', 2, '64452e7bedd72.jpg', '2023-04-23 07:11:23', '2023-04-23 13:17:02'),
+(6188272, 'Guppies', 'Fish', 2, 'Male', '0.04', 4, '64452dbd750b3.jpg', '2023-04-23 07:08:13', '2023-04-23 13:15:31'),
+(8166577, 'Elephant', 'Mammals', 4, 'Male', '0.63', 1, '64358f4c4626d.jpg', '2023-04-12 22:34:35', '2023-04-23 13:18:06'),
+(9107807, 'Bat', 'Mammals', 13, 'Female', '0.04', 1, '64452589abc1b.jpg', '2023-04-23 06:33:13', '2023-04-23 15:47:06'),
+(9347373, 'Grasshopper', 'Insects', 2, 'Male', '0.11', 1, '6443ed1e04414.jpg', '2023-04-22 08:20:14', '2023-04-23 13:17:46');
+
+--
+-- Triggers `animals`
+--
+DROP TRIGGER IF EXISTS `animal_chk`;
+DELIMITER $$
+CREATE TRIGGER `animal_chk` BEFORE INSERT ON `animals` FOR EACH ROW IF(SELECT species FROM animals WHERE habitat_id=NEW.habitat_id ORDER BY species ASC LIMIT 1) != NEW.species THEN SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT= 'not a compatible habitat for this animal';
+END IF
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE `comments` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `comment` text COLLATE utf8_unicode_ci NOT NULL,
+  `likes` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `email`, `comment`, `likes`, `created_at`) VALUES
+(1351, 'Team 7', 'fgfdhfhgh@gmail.com', 'we are a group of 7 people', 2, '2023-04-12 14:00:41'),
+(3345, 'yes', 'meee@gmail.com', 'yes we did it', 13, '2023-04-12 09:48:30'),
+(6468, 'testing', 'testing@gmail.com', 'test cases', 2, '2023-04-15 17:40:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exhibits`
+--
+
+DROP TABLE IF EXISTS `exhibits`;
+CREATE TABLE `exhibits` (
+  `exhibit_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` text NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `animal_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `exhibits`
+--
+
+INSERT INTO `exhibits` (`exhibit_id`, `name`, `description`, `location`, `animal_id`) VALUES
+(1, 'Houston animal exhibition', 'Join us at our upcoming animal exhibition where you\'ll have the opportunity to get up close and personal with some of the world\'s most fascinating creatures. From majestic lions to adorable meerkats, our exhibition features a wide variety of animals from all corners of the globe.\r\n\r\nYou\'ll have the chance to learn about each animal\'s unique characteristics and behaviors, and our knowledgeable staff will be on hand to answer any questions you may have. You\'ll also get a behind-the-scenes look at how we care for our animals and the important work we do to protect endangered species.\r\n\r\nDon\'t miss this exciting opportunity to experience the wonder of the animal kingdom. Book your tickets now and get ready to be amazed!', 'Houston, TX', 8166577),
+(2, 'Dallas animal exhibition', 'Step into the wild at our upcoming animal exhibition and discover the incredible diversity of the animal kingdom. From colorful birds to slithery snakes, our exhibition features a wide range of animals that will leave you in awe.\r\n\r\nYou\'ll have the chance to witness these amazing creatures in their natural habitats, from the depths of the ocean to the treetops of the rainforest. Our expert guides will take you on a journey through the world\'s most fascinating ecosystems, introducing you to the animals that call them home.\r\n\r\nBut that\'s not all – our exhibition also features interactive exhibits and hands-on activities that will bring you closer to the animals than ever before. You\'ll be able to touch and feel the different textures of animal skin and fur, and even get to feed some of our resident animals.\r\n\r\nDon\'t miss this chance to explore the beauty and wonder of the animal kingdom. Book your tickets now and get ready to embark on an unforgettable adventure!', 'Dallas,Tx', NULL),
+(3, 'NewYork Hot Event', 'We will have all sort of Animal to display during this fantastic event. ', 'New York', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery`
+--
+
+DROP TABLE IF EXISTS `gallery`;
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `image_name` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `image_name`) VALUES
+(1, 'ca_0108nid_tawny_owl_online.jpg'),
+(2, 'wp2174984.jpg'),
+(3, 'Crocodile3.jpg'),
+(4, 'Wild-animal-wallpaper.jpg'),
+(6, 'elephant.jpg'),
+(7, '220px-Bonnet_macaque_(Macaca_radiata)_Photogr'),
+(8, 'Pteropus_rodricensis.jpg'),
+(9, '220px-Bonnet_macaque_(Macaca_radiata)_Photogr'),
+(10, '750x500_swordfish_swimming_alone_shuterstock_'),
+(11, 'lg_114008_Pink_Rose_Guppy.jpg'),
+(12, 'fish.jpeg'),
+(13, 'Greenback_cutthroat_trout_USFWS.jpg'),
+(14, 'world-snake-day.jpg'),
+(15, '220908_Snake_045.png'),
+(16, 'jacques-bopp-abkyan4c25q-unsplash.jpg'),
+(17, 'canter-g0cc82b535.jpg'),
+(18, 'images-olc-20170429_AOPtoad_4879_600_q85.jpg'),
+(19, 'Magnificent_Tree_Frog_900.jpg'),
+(20, 'squirrel-monkey-rf-gty-ps2-230202_16753524269'),
+(21, 'swordfish_shutterstock_779803462.jpg'),
+(22, 'df3d3b07-ea70-4f75-9dc0-e468c1caddf1_ccdda26b'),
+(23, '4771.jpg'),
+(24, 'Turtle-brumation-pet-talk-1024x767.jpeg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `giftcards`
+--
+
+DROP TABLE IF EXISTS `giftcards`;
+CREATE TABLE `giftcards` (
+  `gift_card_id` int(11) NOT NULL,
+  `card_number` varchar(16) NOT NULL,
+  `balance` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `giftcards`
+--
+
+INSERT INTO `giftcards` (`gift_card_id`, `card_number`, `balance`) VALUES
+(1, '123456789', '50.00'),
+(2, '987654321', '100.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `habitats`
+--
+
+DROP TABLE IF EXISTS `habitats`;
+CREATE TABLE `habitats` (
+  `habitat_id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `size` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `habitats`
+--
+
+INSERT INTO `habitats` (`habitat_id`, `name`, `location`, `size`) VALUES
+(1, 'Richmond', 'houston', '9.00'),
+(2, 'galveston', 'texas', '3.00'),
+(3, 'Dallas', 'Dallas', '200.00'),
+(4, 'New York', 'New York', '200.00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `likes`
+--
+
+DROP TABLE IF EXISTS `likes`;
+CREATE TABLE `likes` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `comment_id` int(11) UNSIGNED NOT NULL,
+  `ip_address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sale_tickets`
+--
+
+DROP TABLE IF EXISTS `sale_tickets`;
+CREATE TABLE `sale_tickets` (
+  `ticket_id` int(11) NOT NULL,
+  `ticket_type` enum('VIP','STANDARD') COLLATE utf8_unicode_ci NOT NULL,
+  `ticket_price` decimal(10,0) NOT NULL,
+  `event` int(11) DEFAULT NULL,
+  `available_tickets` int(11) NOT NULL,
+  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `sale_tickets`
+--
+
+INSERT INTO `sale_tickets` (`ticket_id`, `ticket_type`, `ticket_price`, `event`, `available_tickets`, `date_updated`) VALUES
+(313, 'STANDARD', '60', 1, 196, '2023-04-23 06:19:17'),
+(635, 'VIP', '100', 1, 297, '2023-04-23 11:33:48'),
+(1424, 'STANDARD', '70', 2, 197, '2023-04-22 10:25:13'),
+(5484, 'STANDARD', '50', 3, 196, '2023-04-23 06:14:25'),
+(6193, 'VIP', '80', 2, 97, '2023-04-23 06:16:27'),
+(9951, 'VIP', '200', 3, 100, '2023-04-22 10:12:37');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff`
+--
+
+DROP TABLE IF EXISTS `staff`;
+CREATE TABLE `staff` (
+  `staff_id` int(6) UNSIGNED NOT NULL,
+  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `job_title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `contact_info` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `role_id` int(6) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `staff`
+--
+
+INSERT INTO `staff` (`staff_id`, `name`, `job_title`, `contact_info`, `role_id`) VALUES
+(1, 'sali diarra', 'Manager', '3467791291', 2),
+(676, 'Shadrick Jordan', 'Staff ', '8291523818', 1),
+(863, 'allaman konate', 'admin', '3467791291', 5),
+(948, 'Sabrina Carptenter', 'Staff', '636281154', 1),
+(1264, 'Joe Doe', 'Staff', '2345671234', 3),
+(2393, 'Chris Reeves', 'Manager', '832-546-8909', 4),
+(3175, 'John Wick', 'Manager', '8372718293', 4),
+(4332, 'Sean', 'Staff', '6372387289', 3),
+(5082, 'Bob Samuel', 'Staff', '6536378181', 1),
+(5175, 'Rayes Van', 'Staff', '62728191919', 4),
+(6243, 'Merdi Adam', 'Staff', '6371028927', 3),
+(6708, 'Summer ', 'Manager', '8372718293', 4),
+(7053, 'Phal Va', 'Manager', '8728291291', 5),
+(7136, 'Judy sarah', 'Staff', '6382910142', 1),
+(7190, 'Jim Bob', 'Staff', '7899085678', 1),
+(7262, 'Elsie Bura', 'Manager', '5192792657', 4),
+(8841, 'Sarah Josman', 'Staff', '6265159172', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `staff_roles`
+--
+
+DROP TABLE IF EXISTS `staff_roles`;
+CREATE TABLE `staff_roles` (
+  `role_id` int(6) UNSIGNED NOT NULL,
+  `role` varchar(50) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `staff_roles`
+--
+
+INSERT INTO `staff_roles` (`role_id`, `role`) VALUES
+(1, 'zookeeper'),
+(2, 'Gift shop manager'),
+(3, 'Aquarist'),
+(4, 'Public relations manager'),
+(5, 'Personnel manager');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tickets`
+--
+
+DROP TABLE IF EXISTS `tickets`;
+CREATE TABLE `tickets` (
+  `ticket_id` int(11) NOT NULL,
+  `sale_ticket_id` int(11) NOT NULL,
+  `CustID` int(11) DEFAULT NULL,
+  `CustEmail` varchar(255) NOT NULL,
+  `purchase_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `ticket_type` varchar(255) NOT NULL,
+  `ticket_price` decimal(10,0) NOT NULL DEFAULT '0',
+  `Quantity` int(11) NOT NULL,
+  `payment_method` varchar(255) NOT NULL,
+  `event` varchar(255) NOT NULL,
+  `gift_card_id` int(11) DEFAULT NULL,
+  `credit_card_number` varchar(16) DEFAULT NULL,
+  `date_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tickets`
+--
+
+INSERT INTO `tickets` (`ticket_id`, `sale_ticket_id`, `CustID`, `CustEmail`, `purchase_date`, `ticket_type`, `ticket_price`, `Quantity`, `payment_method`, `event`, `gift_card_id`, `credit_card_number`, `date_updated`) VALUES
+(592, 313, 694430, 'ez@gmail.com', '2023-04-23 06:19:17', 'STANDARD', '60', 3, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-23 06:19:17'),
+(1608, 5484, 840971, 'jr@gmail.com', '2023-04-23 06:14:25', 'STANDARD', '50', 4, 'Credit Card', 'NewYork Hot Event', NULL, NULL, '2023-04-23 06:14:25'),
+(1767, 5704, 736983, 'sl@gmail.com', '2023-04-19 12:16:44', 'VIP', '111', 2, 'Credit Card', 'Dallas animal exhibition', NULL, NULL, '2023-04-22 10:15:08'),
+(1852, 635, 457890, 'horses@gmail.com', '2023-04-23 11:33:48', 'VIP', '100', 2, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-23 11:33:48'),
+(2042, 313, 144873, 'selake@gm.com', '2023-04-22 10:02:05', 'STANDARD', '60', 2, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-22 10:02:05'),
+(2045, 313, 668345, 'alphamomat@gmail.com', '2023-04-21 12:59:37', 'STANDARD', '60', 4, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 12:59:37'),
+(2050, 6193, 813318, 'jd@gmail.com', '2023-04-23 06:16:27', 'VIP', '80', 3, 'Credit Card', 'Dallas animal exhibition', NULL, NULL, '2023-04-23 06:16:27'),
+(2096, 313, 736983, 'sl@gmail.com', '2023-04-19 12:24:12', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-19 12:24:12'),
+(2676, 313, 827440, 'allaman.konate@techwave.net', '2023-04-21 12:46:50', 'STANDARD', '60', 2, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-22 08:11:42'),
+(2879, 635, 144873, 'selake@gm.com', '2023-04-22 10:19:00', 'VIP', '100', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-22 10:19:00'),
+(3707, 313, 813318, 'jd@gmail.com', '2023-04-23 06:16:55', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-23 06:16:55'),
+(4183, 313, 243998, 'allamankonate@gmail.com', '2023-04-21 12:43:36', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 12:43:36'),
+(5038, 313, 736983, 'sl@gmail.com', '2023-04-21 12:56:25', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 12:56:25'),
+(5268, 313, 243998, 'allamankonate@gmail.com', '2023-04-21 10:31:32', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 10:31:32'),
+(7824, 5704, 243998, 'allamankonate@gmail.com', '2023-04-20 11:13:24', 'VIP', '110', 2, 'Credit Card', 'Dallas animal exhibition', NULL, NULL, '2023-04-20 11:13:24'),
+(8004, 1424, 827440, 'allaman.konate@techwave.net', '2023-04-22 07:57:14', 'STANDARD', '70', 1, 'Credit Card', 'Dallas animal exhibition', NULL, NULL, '2023-04-22 07:57:14'),
+(8143, 1424, 144873, 'selake@gm.com', '2023-04-22 10:25:13', 'STANDARD', '70', 2, 'Credit Card', 'Dallas animal exhibition', NULL, NULL, '2023-04-22 10:25:13'),
+(8467, 313, 668345, 'alphamomat@gmail.com', '2023-04-21 12:59:00', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 12:59:00'),
+(9960, 313, 243998, 'allamankonate@gmail.com', '2023-04-21 10:20:45', 'STANDARD', '60', 1, 'Credit Card', 'Houston animal exhibition', NULL, NULL, '2023-04-21 10:20:45');
+
+--
+-- Triggers `tickets`
+--
+DROP TRIGGER IF EXISTS `max_tickets`;
+DELIMITER $$
+CREATE TRIGGER `max_tickets` BEFORE INSERT ON `tickets` FOR EACH ROW BEGIN
+    DECLARE total_tickets INT;
+    SET total_tickets = (SELECT SUM(Quantity) FROM tickets WHERE CustEmail = NEW.CustEmail);
+    IF (total_tickets + NEW.Quantity) > 5 THEN
+    SET @error_msg = ' Sorry , you are allowed to buy more than 5 tickets';
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = @error_msg;
+    END IF;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitors`
+--
+
+DROP TABLE IF EXISTS `visitors`;
+CREATE TABLE `visitors` (
+  `CustID` int(11) NOT NULL,
+  `CustFname` varchar(255) NOT NULL,
+  `CustLname` varchar(255) NOT NULL,
+  `CustEmail` varchar(45) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `CustDOB` date NOT NULL,
+  `visit_date` date NOT NULL,
+  `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `visitors`
+--
+
+INSERT INTO `visitors` (`CustID`, `CustFname`, `CustLname`, `CustEmail`, `password`, `CustDOB`, `visit_date`, `date_created`) VALUES
+(144873, 'summ', 'l', 'selake@gm.com', '$2y$10$RzfU6L6275kNFiPbwI78eOtRRySvyER.pajp4FPVWnd2FBSCOWwIK', '2023-04-11', '2023-04-25', '2023-04-22 10:01:30'),
+(243998, 'allaman', 'konate', 'allamankonate@gmail.com', '$2y$10$yf8AsijXESPVa6/1Rypahuw5AKvIzY1VPs7EpKYYeoNQ8ZlUy.Ph.', '2023-03-10', '2023-04-01', '2023-04-14 07:51:28'),
+(457890, 'Christopher', 'Reeves', 'horses@gmail.com', '$2y$10$2EqbjJbCmtq.UXYl6B5CKOii9Df5WUh5qGn/vI7V24NrEjLSqw6H6', '2002-07-10', '2023-04-24', '2023-04-23 11:33:13'),
+(461001, 'Alpha', 'Alpha', 'alpha@gmail.com', '$2y$10$1ghWtJuSiDIBaQbhzrQWGO9wKsT6CpYtGN2fXFYvJ/SFnFLal4hwK', '2023-04-06', '2023-05-04', '2023-04-14 07:51:28'),
+(648605, 'test8', 'test8', 'test8@gmail.com', '$2y$10$VnVueVDp/CxfXMsXRoDICei1cHg0kZhyhyA7ajRBz64mAzjvFEX72', '2023-04-07', '2023-04-15', '2023-04-19 12:21:45'),
+(668345, 'Alpha', 'Momat', 'alphamomat@gmail.com', '$2y$10$VSJKKknLDV9EhKPu05p6dOarLfl51Zui7k.6dQrtl2pvg0qS8H6Ve', '2002-06-21', '2023-04-21', '2023-04-21 12:36:26'),
+(694430, 'Elizabeth', 'L', 'ez@gmail.com', '$2y$10$c1MATCg9mMdyARQy59JOw.QtJglQhnOgiVxYVP8N3mHQeQuDFjIHi', '2003-02-21', '2023-04-18', '2023-04-23 06:18:14'),
+(736983, 'summ', 'l', 'sl@gmail.com', '$2y$10$isqX58fTytrrVrT8m7xiJuJUEs4.bxTuXoLndmpegcuJpzsgvXVZ2', '2002-03-12', '2023-04-17', '2023-04-19 12:15:32'),
+(793115, 'TEST7', 'TEST7', 'test7@gmail.com', '$2y$10$K0JzgmwRT3wS0h53JFY8aOQVrUMNxbi8eSwRxs0Z7jo51MCnDgQdG', '2023-04-08', '2023-04-29', '2023-04-19 12:11:57'),
+(795070, 'test5', 'test5', 'ahkonate@cougarnet.uh.edu', '$2y$10$M.EfL6o43DlnIHp/P1CbWOlZvKiVMAJvxyZjF1lFnq7RYjobUQS3S', '2023-04-05', '2023-04-29', '2023-04-14 07:51:28'),
+(813318, 'Jane', 'Doe', 'jd@gmail.com', '$2y$10$9QiVx6od4bKfmCDkIXMBXu.JQ63P0V68FGAfJQsx9nO/dShGpbVLu', '2000-09-22', '2023-04-25', '2023-04-23 06:15:48'),
+(827440, 'allaman', 'konate', 'allaman.konate@techwave.net', '$2y$10$x3sq89FYqkpKJ3voclqVq.veOgen02LHJr..2GDdg6GZxTdSv2.mS', '2023-04-03', '2023-04-21', '2023-04-21 12:46:26'),
+(840971, 'Joe', 'Random', 'jr@gmail.com', '$2y$10$XJDTSFtW4Ve.t1ipwr6lAeFu.rPvpDb2ogDTlrXSrDHoYocpJIm4.', '2001-06-23', '2023-04-23', '2023-04-23 06:13:49'),
+(998189, 'ta', 'login', 'talogin@gmail.com', '$2y$10$mkZ2gk.Erurh3wF2a4t3Jed2E39VO05c8oUAH9Eg3ItE9As5ZkE5S', '2001-01-24', '2023-04-27', '2023-04-23 19:05:55');
+
+--
+-- Triggers `visitors`
+--
+DROP TRIGGER IF EXISTS `check_visitor_age`;
+DELIMITER $$
+CREATE TRIGGER `check_visitor_age` BEFORE INSERT ON `visitors` FOR EACH ROW BEGIN
+    DECLARE age INT;
+    SET age = TIMESTAMPDIFF(YEAR, NEW.CustDOB, CURDATE());
+    IF age < 18 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Failed: Visitor must be at least 18 years old.';
+    END IF;
+END
+$$
+DELIMITER ;
+DROP TRIGGER IF EXISTS `duplicate_email`;
+DELIMITER $$
+CREATE TRIGGER `duplicate_email` BEFORE INSERT ON `visitors` FOR EACH ROW IF (SELECT COUNT(*) FROM visitors WHERE CustEmail = NEW.CustEmail) > 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'This email address is already registered.';
+    END IF
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitor_totals`
+--
+
+DROP TABLE IF EXISTS `visitor_totals`;
+CREATE TABLE `visitor_totals` (
+  `id` int(11) NOT NULL,
+  `CustEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `total_orders` decimal(10,0) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`CustID`),
+  ADD UNIQUE KEY `CustID_UNIQUE` (`CustID`),
+  ADD UNIQUE KEY `CustEmail_UNIQUE` (`CustEmail`);
+
+--
+-- Indexes for table `animals`
+--
+ALTER TABLE `animals`
+  ADD PRIMARY KEY (`animal_id`),
+  ADD KEY `habitat_id` (`habitat_id`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `exhibits`
+--
+ALTER TABLE `exhibits`
+  ADD PRIMARY KEY (`exhibit_id`),
+  ADD KEY `animal_id` (`animal_id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `giftcards`
+--
+ALTER TABLE `giftcards`
+  ADD PRIMARY KEY (`gift_card_id`);
+
+--
+-- Indexes for table `habitats`
+--
+ALTER TABLE `habitats`
+  ADD PRIMARY KEY (`habitat_id`);
+
+--
+-- Indexes for table `likes`
+--
+ALTER TABLE `likes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sale_tickets`
+--
+ALTER TABLE `sale_tickets`
+  ADD PRIMARY KEY (`ticket_id`),
+  ADD UNIQUE KEY `unique_ticket` (`ticket_type`,`ticket_price`),
+  ADD KEY `exhibit_id` (`event`) USING BTREE;
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
+  ADD PRIMARY KEY (`staff_id`),
+  ADD KEY `role_id` (`role_id`);
+
+--
+-- Indexes for table `staff_roles`
+--
+ALTER TABLE `staff_roles`
+  ADD PRIMARY KEY (`role_id`);
+
+--
+-- Indexes for table `tickets`
+--
+ALTER TABLE `tickets`
+  ADD PRIMARY KEY (`ticket_id`),
+  ADD KEY `CustID` (`CustID`),
+  ADD KEY `gift_card_id` (`gift_card_id`);
+
+--
+-- Indexes for table `visitors`
+--
+ALTER TABLE `visitors`
+  ADD PRIMARY KEY (`CustID`),
+  ADD UNIQUE KEY `CustEmail_UNIQUE` (`CustEmail`),
+  ADD UNIQUE KEY `CustID_UNIQUE` (`CustID`);
+
+--
+-- Indexes for table `visitor_totals`
+--
+ALTER TABLE `visitor_totals`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `CustEmail` (`CustEmail`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `CustID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=405997;
+
+--
+-- AUTO_INCREMENT for table `animals`
+--
+ALTER TABLE `animals`
+  MODIFY `animal_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9347374;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9010;
+
+--
+-- AUTO_INCREMENT for table `exhibits`
+--
+ALTER TABLE `exhibits`
+  MODIFY `exhibit_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+
+--
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `giftcards`
+--
+ALTER TABLE `giftcards`
+  MODIFY `gift_card_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `habitats`
+--
+ALTER TABLE `habitats`
+  MODIFY `habitat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `likes`
+--
+ALTER TABLE `likes`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sale_tickets`
+--
+ALTER TABLE `sale_tickets`
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9997;
+
+--
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `staff_id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8842;
+
+--
+-- AUTO_INCREMENT for table `tickets`
+--
+ALTER TABLE `tickets`
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9961;
+
+--
+-- AUTO_INCREMENT for table `visitor_totals`
+--
+ALTER TABLE `visitor_totals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `animals`
+--
+ALTER TABLE `animals`
+  ADD CONSTRAINT `animals_ibfk_1` FOREIGN KEY (`habitat_id`) REFERENCES `habitats` (`habitat_id`);
+
+--
+-- Constraints for table `exhibits`
+--
+ALTER TABLE `exhibits`
+  ADD CONSTRAINT `exhibits_ibfk_1` FOREIGN KEY (`animal_id`) REFERENCES `animals` (`animal_id`),
+  ADD CONSTRAINT `fk_animal` FOREIGN KEY (`animal_id`) REFERENCES `animals` (`animal_id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `staff`
+--
+ALTER TABLE `staff`
+  ADD CONSTRAINT `staff_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `staff_roles` (`role_id`);
+
+--
+-- Constraints for table `tickets`
+--
+ALTER TABLE `tickets`
+  ADD CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`CustID`) REFERENCES `visitors` (`CustID`),
+  ADD CONSTRAINT `tickets_ibfk_2` FOREIGN KEY (`gift_card_id`) REFERENCES `giftcards` (`gift_card_id`);
+COMMIT;

@@ -1,0 +1,356 @@
+[25-Apr-2023 11:32:31 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COUNT(*) AS numbertickets WHERE CustEmail='sml@gmail.com'' at line 1 in /home4/safariha/public_html/ZooManagement/ticket_report.php:447
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/ticket_report.php(447): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 447
+[25-Apr-2023 11:33:43 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COUNT(Quantity) AS numbertickets WHERE CustEmail='sml@gmail.com'' at line 1 in /home4/safariha/public_html/ZooManagement/ticket_report.php:447
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/ticket_report.php(447): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 447
+[25-Apr-2023 11:33:48 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'COUNT(Quantity) AS numbertickets WHERE CustEmail='sml@gmail.com'' at line 1 in /home4/safariha/public_html/ZooManagement/ticket_report.php:447
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/ticket_report.php(447): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 447
+[25-Apr-2023 11:39:29 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'exhibits.exhibit_id' in 'field list' in /home4/safariha/public_html/ZooManagement/edit-animal.php:39
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/edit-animal.php(39): mysqli_query(Object(mysqli), 'SELECT animals....')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/edit-animal.php on line 39
+[25-Apr-2023 11:39:35 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'exhibits.exhibit_id' in 'field list' in /home4/safariha/public_html/ZooManagement/edit-animal.php:39
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/edit-animal.php(39): mysqli_query(Object(mysqli), 'SELECT animals....')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/edit-animal.php on line 39
+[25-Apr-2023 11:40:06 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'exhibits.exhibit_id' in 'field list' in /home4/safariha/public_html/ZooManagement/edit-animal.php:39
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/edit-animal.php(39): mysqli_query(Object(mysqli), 'SELECT animals....')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/edit-animal.php on line 39
+[25-Apr-2023 11:40:16 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'exhibits.exhibit_id' in 'field list' in /home4/safariha/public_html/ZooManagement/edit-animal.php:39
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/edit-animal.php(39): mysqli_query(Object(mysqli), 'SELECT animals....')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/edit-animal.php on line 39
+[25-Apr-2023 11:44:28 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:44:48 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:45:17 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:45:43 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:46:10 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:47:18 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:47:18 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:47:26 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:47:32 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:47:42 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:51:03 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[25-Apr-2023 11:53:36 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 11:54:16 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[25-Apr-2023 11:54:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 11:55:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 11:55:30 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 11:56:50 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:57:12 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:57:45 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:59:06 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 11:59:11 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 12:04:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:05:03 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:05:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:07:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:07:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:07:45 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'cust_email' in 'where clause' in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php:145
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php(145): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 145
+[25-Apr-2023 12:08:19 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:08:19 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'CustEmail' in where clause is ambiguous in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php:145
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php(145): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 145
+[25-Apr-2023 12:08:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:10:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 12:11:12 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 15:17:41 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:17:41 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:17:41 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:17:41 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:17:41 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:18:25 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:18:25 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:18:25 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:18:25 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:18:25 America/Boise] PHP Warning:  Undefined array key "name" in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 65
+[25-Apr-2023 15:25:00 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 4
+[25-Apr-2023 15:25:03 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 4
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $staff_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 139
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $name in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 142
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $job_title in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 146
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $contact_info in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 150
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $role_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 161
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $role_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 161
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $role_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 161
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $role_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 161
+[25-Apr-2023 15:26:18 America/Boise] PHP Warning:  Undefined variable $role_id in /home4/safariha/public_html/ZooManagement/edit_staff.php on line 161
+[25-Apr-2023 22:14:51 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 22:17:40 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 22:17:45 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 22:34:58 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as total_visitors FROM visitors' at line 1 in /home4/safariha/public_html/ZooManagement/visitors_report.php:170
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/visitors_report.php(170): mysqli->query('SELECT COUNT() ...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/visitors_report.php on line 170
+[25-Apr-2023 22:38:25 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:38:59 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:40:07 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:40:31 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:40:52 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:41:08 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:42:00 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:42:06 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:42:08 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:42:11 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:42:15 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:44:39 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:47:08 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 22:48:50 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 23:16:34 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:17:03 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:17:17 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:17:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:17:48 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:17:57 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:18:29 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:19:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:20:59 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:21:05 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:22:41 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:22:56 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:23:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:23:56 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:24:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:27:40 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:28:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:30:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[25-Apr-2023 23:30:55 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[25-Apr-2023 23:32:53 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:04 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:10 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:16 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:36 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:50 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:33:59 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[25-Apr-2023 23:34:05 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[26-Apr-2023 08:29:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 08:29:55 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 08:30:17 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 08:35:06 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[26-Apr-2023 08:35:10 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[26-Apr-2023 08:35:15 America/Boise] PHP Parse error:  syntax error, unexpected token "<", expecting end of file in /home4/safariha/public_html/ZooManagement/edit-visitor.php on line 4
+[26-Apr-2023 08:49:17 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as total_visitors FROM visitors' at line 1 in /home4/safariha/public_html/ZooManagement/visitors_report.php:170
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/visitors_report.php(170): mysqli->query('SELECT COUNT() ...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/visitors_report.php on line 170
+[26-Apr-2023 08:50:14 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 08:53:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:02:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:03:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:03:14 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: Column 'CustEmail' in where clause is ambiguous in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php:147
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php(147): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 147
+[26-Apr-2023 09:10:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:10:23 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%allamankonate@gmail.com%'' at line 1 in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php:147
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php(147): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 147
+[26-Apr-2023 09:10:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:10:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%allamankonate@gmail.com%'' at line 1 in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php:147
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php(147): mysqli->query('SELECT * FROM t...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 147
+[26-Apr-2023 09:10:27 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:13:26 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 09:15:52 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 217
+[26-Apr-2023 09:18:44 America/Boise] PHP Warning:  Undefined array key "YEAR(purchase_date)" in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 161
+[26-Apr-2023 09:18:44 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 217
+[26-Apr-2023 09:21:50 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home4/safariha/public_html/ZooManagement/ticket_report.php on line 217
+[26-Apr-2023 09:29:19 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 09:30:11 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 09:33:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:34:02 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:34:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:35:31 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:35:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:35:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:36:01 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:36:08 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:36:26 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:36:30 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:36:35 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:37:14 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:37:51 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 09:48:04 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as total_visitors FROM visitors' at line 1 in /home4/safariha/public_html/ZooManagement/visitors_report.php:170
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/visitors_report.php(170): mysqli->query('SELECT COUNT() ...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/visitors_report.php on line 170
+[26-Apr-2023 09:48:25 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as total_visitors FROM visitors' at line 1 in /home4/safariha/public_html/ZooManagement/visitors_report.php:170
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/visitors_report.php(170): mysqli->query('SELECT COUNT() ...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/visitors_report.php on line 170
+[26-Apr-2023 09:58:42 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 09:58:56 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 09:59:08 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 09:59:20 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 377
+[26-Apr-2023 09:59:20 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 385
+[26-Apr-2023 09:59:23 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 377
+[26-Apr-2023 09:59:23 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 385
+[26-Apr-2023 09:59:24 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 377
+[26-Apr-2023 09:59:24 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 385
+[26-Apr-2023 09:59:26 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 09:59:34 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 09:59:57 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:09 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:24 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:37 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:42 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:53 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:00:56 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 10:01:00 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 13:16:13 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 13:28:38 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 13:36:59 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 157
+[26-Apr-2023 13:45:36 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 157
+[26-Apr-2023 13:47:35 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 13:59:23 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 13:59:32 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 14:02:09 America/Boise] PHP Warning:  file_get_contents(cart.json): Failed to open stream: No such file or directory in /home4/safariha/public_html/ZooManagement/cart.php on line 5
+[26-Apr-2023 14:03:08 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 159
+[26-Apr-2023 14:03:13 America/Boise] PHP Warning:  file_get_contents(cart.json): Failed to open stream: No such file or directory in /home4/safariha/public_html/ZooManagement/cart.php on line 5
+[26-Apr-2023 14:03:14 America/Boise] PHP Warning:  file_get_contents(cart.json): Failed to open stream: No such file or directory in /home4/safariha/public_html/ZooManagement/cart.php on line 5
+[26-Apr-2023 14:03:14 America/Boise] PHP Warning:  file_get_contents(cart.json): Failed to open stream: No such file or directory in /home4/safariha/public_html/ZooManagement/cart.php on line 5
+[26-Apr-2023 14:04:29 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 14:16:25 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 14:26:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:27:10 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 14:27:17 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 14:27:22 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:27:43 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:27:45 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 14:27:48 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 14:27:58 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:28:29 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:28:51 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 350
+[26-Apr-2023 14:29:19 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 14:29:20 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:29:40 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:33:53 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 14:34:09 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 15:04:59 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 15:05:14 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 15:05:30 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 15:05:37 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 15:05:44 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 15:05:46 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 15:08:59 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:09:52 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:09:56 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:11:10 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:13:05 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:14:24 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:16:42 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:33:51 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:36:47 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:36:51 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 15:51:07 America/Boise] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/safariha/public_html/ZooManagement/add-animal.php:1) in /home4/safariha/public_html/ZooManagement/add-animal.php on line 104
+[26-Apr-2023 16:06:04 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:06:21 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 16:10:45 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 57
+[26-Apr-2023 16:11:03 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 57
+[26-Apr-2023 16:11:03 America/Boise] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home4/safariha/public_html/ZooManagement/add-animal.php:200
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/add-animal.php(200): mysqli_query(Object(mysqli), 'SELECT habitat_...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/add-animal.php on line 200
+[26-Apr-2023 16:11:48 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 57
+[26-Apr-2023 16:12:04 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 57
+[26-Apr-2023 16:12:04 America/Boise] PHP Fatal error:  Uncaught Error: mysqli object is already closed in /home4/safariha/public_html/ZooManagement/add-animal.php:200
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/add-animal.php(200): mysqli_query(Object(mysqli), 'SELECT habitat_...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/add-animal.php on line 200
+[26-Apr-2023 16:12:52 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 57
+[26-Apr-2023 16:15:56 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[26-Apr-2023 16:44:15 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:44:24 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:45:24 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:51:52 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 16:52:20 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/Buy_Ticket.php on line 156
+[26-Apr-2023 16:53:49 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home4/safariha/public_html/ZooManagement/userlogincheck.php on line 27
+[26-Apr-2023 16:54:01 America/Boise] PHP Warning:  Trying to access array offset on value of type null in /home4/safariha/public_html/ZooManagement/userlogincheck.php on line 27
+[26-Apr-2023 16:54:23 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:54:49 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:55:16 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:55:25 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustFname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:06 America/Boise] PHP Warning:  Undefined array key "CustLname" in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 156
+[26-Apr-2023 16:56:54 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:57:37 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40
+[26-Apr-2023 16:57:59 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 16:58:53 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 16:59:04 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 16:59:24 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:00:00 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:00:13 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 377
+[26-Apr-2023 17:00:13 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 385
+[26-Apr-2023 17:00:22 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:00:32 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:00:45 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:00:52 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:01:00 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:01:19 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:01:32 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:01:43 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:01:46 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:03:03 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[26-Apr-2023 17:03:25 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[26-Apr-2023 17:04:04 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[26-Apr-2023 17:10:12 America/Boise] PHP Warning:  Undefined variable $total_filtered_tickets in /home4/safariha/public_html/ZooManagement/New_Tickets.php on line 349
+[26-Apr-2023 17:10:40 America/Boise] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') as total_visitors FROM visitors' at line 1 in /home4/safariha/public_html/ZooManagement/visitors_report.php:170
+Stack trace:
+#0 /home4/safariha/public_html/ZooManagement/visitors_report.php(170): mysqli->query('SELECT COUNT() ...')
+#1 {main}
+  thrown in /home4/safariha/public_html/ZooManagement/visitors_report.php on line 170
+[27-Apr-2023 08:02:15 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[27-Apr-2023 08:02:29 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[27-Apr-2023 08:03:42 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[27-Apr-2023 08:04:17 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[27-Apr-2023 08:04:38 America/Boise] PHP Warning:  Undefined variable $message in /home4/safariha/public_html/ZooManagement/add-animal.php on line 135
+[27-Apr-2023 08:15:33 America/Boise] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home4/safariha/public_html/ZooManagement/View_Total_Paid_Tickets.php on line 40

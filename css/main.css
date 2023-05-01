@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Kameron&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Jacques+Francois+Shadow&family=Kameron&family=Rubik+Vinyl&display=swap');
+
+
+#root {
+    min-height: 100vh;
+    position: relative;
+
+
+}
+
+.h1 {
+    text-align: center;
+    color: tomato;
+    position: relative;
+    margin-top: 50px;
+}
+
+h2 {
+    font-family: 'Rubik Vinyl', cursive;
+    font-size: xxx-large;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 30px chartreuse, 0 0 5px darkseagreen;
+
+}
+
+.user {
+
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 30px chartreuse, 0 0 5px darkseagreen;
+}
+
+#body {
+    background-image: url(../Images/background.jpg);
+
+}
+
+.menu {
+    width: 100%;
+    height: 7%;
+    position: fixed;
+    background-color: mediumspringgreen;
+    margin-top: 0px !important;
+    align-content: center;
+
+}
+
+.header {
+    display: inline;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+.header::after {
+    margin: 10px;
+}
+
+ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0px;
+    background-color: mediumspringgreen;
+    margin-left: 8px !important;
+    margin-right: 8px !important;
+    border-radius: 10px;
+    border-color: black;
+    border-style: double;
+
+
+}
+
+li {
+    float: left;
+    padding-left: 8px;
+    display: inline-block;
+    font-size: 20px;
+
+}
+
+li a:hover {
+    background-color: ghostwhite;
+
+}
+
+li a {
+
+    text-align: center;
+    text-decoration: none;
+    background-color: mediumspringgreen;
+    padding: 5px;
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container input[type=text] {
+    margin: 10px;
+    width: 150px;
+}
+
+.container input[type=radio] {
+    color: white;
+}
+
+button[type=submit] {
+    float: right;
+    display: inline;
+    border-radius: 20px;
+    background-color: chartreuse;
+    color: black;
+    padding: 7px;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+button[type=submit]:hover {
+    border-radius: 20px;
+    border-color: chartreuse;
+    background-color: black;
+    color: chartreuse;
+    padding: 7px;
+    transform: scale(1.3);
+    top: -20px;
+    transition: 0.5s;
+    cursor: grab;
+}
+
+button[type=reset] {
+    float: right;
+    display: inline;
+    border-radius: 20px;
+    background-color: rgba(220, 0, 0, 1);
+    color: black;
+    padding: 7px;
+    margin-top: 80px;
+    margin-right: 20px;
+}
+
+button[type=reset]:hover {
+    border-radius: 20px;
+    border-color: rgba(220, 0, 0, 1);
+    background-color: black;
+    color: rgba(220, 0, 0, 1);
+    padding: 7px;
+    transform: scale(1.3);
+    top: -20px;
+    transition: 0.5s;
+    cursor: grab;
+}
+
+.container label {
+    text-align: right;
+    padding-top: 20px;
+    font-size: x-large;
+    color: white;
+    padding-right: 2px;
+}
+
+.container form {
+    margin-top: 6%;
+    height: 500px;
+    text-align: center;
+    width: 600px;
+    box-shadow: 1px 1px 2px black, 0 0 30px white, 0 0 5px darkseagreen;
+    border-style: solid;
+    border-color: mediumspringgreen;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.6)
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.container2 form {
+    border-radius: 10px;
+    margin-top: 6%;
+   
+    text-align: center;
+    margin: 0 auto;
+  max-width: 600px;
+    box-shadow: 1px 1px 2px black, 0 0 30px white, 0 0 5px darkseagreen;
+    border-style: solid;
+    border-color: mediumspringgreen;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.1)
+}
+
+.container2 a:hover {
+    color: chartreuse;
+}
+
+.container2 a:active {
+    color: red;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container3 label {
+    text-align: right;
+    padding-top: 20px;
+    font-size: x-large;
+    color: white;
+    padding-right: 2px;
+}
+
+.container3 form {
+    margin-top: 6%;
+    align-content: center;
+    height: 500px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 1px 1px 2px black, 0 0 30px white, 0 0 5px darkseagreen;
+    border-style: solid;
+    border-color: powderblue;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.6)
+}
+
+.Nani {
+    background-image: url(../images/background.jpg);
+}
+
+.AdminL {
+    background-image: url(../images/elephants.jpg);
+
+
+}
+
+.container table {
+    justify-content: center;
+}
+
+.container3 table {
+    align-content: center;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.container4 form {
+    margin-top: 6%;
+    align-content: center;
+    height: 100px;
+    text-align: center;
+    width: 600px;
+    box-shadow: 1px 1px 2px black, 0 0 30px white, 0 0 5px darkseagreen;
+    border-style: solid;
+    border-color: powderblue;
+    padding: 10px;
+    background: rgba(76, 175, 80, 0.6)
+}
+.container4 form input[type=file] {
+    float: left;
+    display: inline;
+;
+    color: black;
+    padding: 7px;
+    margin-top: 16px;
+    margin-right: 20px;
+}
